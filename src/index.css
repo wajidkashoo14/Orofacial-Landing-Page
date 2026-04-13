@@ -1,3 +1,88 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background-color: #faf9f6;
+    color: #1a2744;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-navy px-6 py-3 text-white text-sm font-medium rounded-md transition-all duration-200 hover:bg-navy-800 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border border-navy/20 bg-white px-6 py-3 text-navy text-sm font-medium rounded-md transition-all duration-200 hover:border-navy/40 hover:bg-navy/5 active:scale-95;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center gap-2 bg-gold px-6 py-3 text-white text-sm font-medium rounded-md transition-all duration-200 hover:bg-gold-600 active:scale-95;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.15em] uppercase text-gold;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border p-6 shadow-sm;
+    border-color: rgb(26 39 68 / 0.08);
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full border;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-cream {
+    background: linear-gradient(180deg, #faf9f6 0%, #f0ece3 100%);
+  }
+
+  .gradient-navy {
+    background: linear-gradient(135deg, #1a2744 0%, #0d1428 100%);
+  }
+}
+
+/* Cursor blink for hero */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  color: #c9952a;
+  margin-left: 2px;
+}
+
+/* Fade-in on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
