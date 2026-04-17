@@ -38,7 +38,7 @@ export default {
         offwhite: 'rgb(250, 249, 246)',
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
         mono: ['"DM Mono"', 'monospace'],
       },
