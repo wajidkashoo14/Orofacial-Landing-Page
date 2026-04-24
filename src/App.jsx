@@ -13,6 +13,7 @@ import EarlyAccess from './components/EarlyAccess'
 import FAQ from './components/FAQ'
 import Roadmap from './components/Roadmap'
 import Footer from './components/Footer'
+import ClinicalDifferentiator from './components/ClinicalDifferentiator'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <TheProblem />
         <ForWho />
         <WhatChanges />
+        <ClinicalDifferentiator /> 
         <HowItWorks />
         <ForProviders />
         <ProviderDashboard />
